@@ -1,5 +1,0 @@
-streamlit>=1.18
-pandas
-plotly
-scikit-learn
-joblib
