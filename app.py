@@ -141,7 +141,8 @@ st.markdown("O app irá pré-processar automaticamente colunas char/bool e trein
 X_proc, y_enc, encoders, target_le = preprocess(df, TARGET_COL)
 
 test_size = st.slider("Tamanho do conjunto de teste (%)", 5, 50, 20)
-X_train, X_test, y_train, y_test = train_test_split(X_proc, y_enc, test_size=test_size/100.0, random_state=42, stratify=y_enc)
+X_train, X_test, y_train, y_test = train_test_split(X_proc, y_enc, test_size=test_size/100.0, random_state=42)
+
 
 n_estimators = st.number_input("Número de árvores (n_estimators)", min_value=10, max_value=1000, value=100, step=10)
 max_depth = st.number_input("Max depth (0 = None)", min_value=0, max_value=100, value=0, step=1)
